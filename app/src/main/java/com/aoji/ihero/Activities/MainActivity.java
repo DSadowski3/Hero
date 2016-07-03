@@ -44,6 +44,12 @@ public class MainActivity extends AppCompatActivity implements MainFragment.Main
                 .addToBackStack(null).commit();
     }
 
+    public void loadMainFragment(){
+        MainFragment mainFragment = new MainFragment();
+        this.getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, mainFragment)
+                .addToBackStack(null).commit();
+    }
+
     @Override
     public void onMainFragmentInteraction(Uri uri) {
 
